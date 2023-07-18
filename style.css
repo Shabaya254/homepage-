@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 200px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 100000;
+    background: #002D62;
+    border-radius: 200px;
+}
+header .logo
+{
+position: relative;
+font-weight: 100;
+color: #00ffff;
+transition: 0;
+text-decoration: none;
+font-size: 2em;
+letter-spacing: 2px;
+transition: 0.6s;
+float: left;
+height: 10px;
+display: flex;
+align-items: center;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    text-decoration: none;
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    margin: 0 5px;
+    font-weight: 500px;
+    font-size: 15px;
+    color: #808080;
+    transition: 0.6s;
+    border-radius: 100px;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    color: #000000;
+    background: #00ffff;
+    transition: 0.5s;
+}
+.head
+{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background-image: url(deerpark.jpg);
+    background-size: cover;
+    transition: 0s;
+}
+.welcome
+{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    padding-top: 120px;
+    color: aliceblue;
+}
+h2
+{
+  background-color: #000000;
+  color: #bbb;
+}
+.allboxes
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    font-family: 'Lato', sans-serif;
+}  
+.checkbox_select
+{
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 120%;
+    outline: none;
+    cursor: pointer;
+}
+.region
+{
+    width: 300px;
+}
+.cash
+{
+    width: 250px;
+}
+/*#property_checkbox_select
+{
+    width: 250px;
+}*/
+.btn
+{
+    height: 50px;
+    width: 200px;
+    background: #dff60b;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  
+}
+.searchbutton
+{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+.btn:hover
+{
+    height: 40px;
+    width: 150px;
+    transition: 0.5;
+}
+.small
+{
+  color: firebrick;
+}
+
+div.checkbox_select
+{
+  width: 250px;
+  height: 50px;
+}
+
+.checkbox_select_anchor
+{
+  display: block;
+  background: firebrick;
+  color: white;
+  cursor: pointer;
+  padding: 10px 5px 5px;
+  position: relative;
+  border: none;
+  border-radius: 25px;
+}
+
+.checkbox_select_anchor:after
+{
+  width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid darkred;
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.expanded .checkbox_select_anchor:after
+{
+	border-top: 0;
+	border-bottom: 10px solid firebrick;
+}
+
+
+.checkbox_select_anchor:hover
+{
+  background: #FF3030 !important;
+}
+
+.expanded .checkbox_select_anchor
+{
+    background: #7C1818;
+}
+
+div.checkbox_select .select_input
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkbox_select_dropdown
+{
+    display: none;
+    background: whitesmoke;
+}
+
+.checkbox_select_dropdown.show
+{
+    display: block;
+}
+
+.checkbox_select_dropdown ul
+{
+    max-height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+  margin: 0;
+      border: 1px solid #999;
+  border-top: 0;
+  border-bottom: 0;
+}
+.checkbox_select_dropdown ul li
+{
+    list-style: none;
+    position: relative;
+    color: #666;
+}
+.checkbox_select_dropdown ul li label
+{
+  position: relative;
+      padding: 10px 5px 5px 40px;
+     display: block;
+  cursor: pointer;
+}
+.checkbox_select_dropdown ul li label:hover
+{
+  background: #cbcbcb;
+  color: white;
+}
+.checkbox_select_dropdown ul li input:checked + label
+{
+  background: #bbb;
+  color: white;
+  text-shadow: 0px 1px 1px rgba(150, 150, 150, 1);
+}
+.checkbox_select_dropdown ul li input
+{
+  position: absolute;
+  left:0;
+  z-index:1;
+  display: inline-block;
+  height: 100%;
+  width: 30px;
+}
+.checkbox_select_search
+{
+    width: 200px;
+    padding: 10px 5px 5px;
+    border: 1px solid #999;
+      border-top: 0;
+    -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+}
+
+.checkbox_select_submit
+{
+    background: #00A600;
+    color: white;
+    padding: 10px 5px 5px;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.hide
+{
+    display: none;
+}
+.budget {
+    width: 23vw;
+  }
+  
+  .range {
+    display: flex;
+    width: 400px;
+  }
+  
+  .range__slider {
+    width: 45%;
+  }
+  
+  .range__value {
+    width: 35%;
+    margin-left: 45px;    
+    text-align: center;
+    border-left: #e6e4e4 1px solid;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+  }
+  
+  .form-group label {
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #f0f0fa;
+    background-color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .form-group span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #efeef6;
+    background-color: #000000;
+  }
+  
+  .range__slider label {
+    margin-bottom: 10px;
+  }
+  
+  .range__slider [type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 13px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* custom thumb */
+  .range__slider [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #7a00ff;
+    border: #f9ca24 5px solid;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+  }
+  
+  .range__slider [type="range"]::-webkit-slider-thumb:hover {
+    background: #f0932b;
+  }
+  
+  .range__slider [type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #f0932b;
+    border: #f9ca24 5px solid; cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+  }
+  
+  .range__slider [type="range"]::-moz-range-thumb:hover {
+    background: #f9ca24;
+  }
+  
+  /* remove border */
+  input::-moz-focus-inner, input::-moz-focus-outer {
+    border: 0;
+  }
+  .form-group
+  {
+    width: 150px;
+  }
+
+/*MAKING IT RESPONSIVE*/
+
+@media only screen and (max-width: 1445px)
+{
+  div.checkbox_select
+  {
+    width: 220px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 1320px)
+{
+  header
+  {
+      position: fixed;
+      top: 20px;
+      left: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      padding: 20px 100px;
+      font-family: 'Roboto', sans-serif;
+      z-index: 100000;
+      background: #002D62;
+      border-radius: 200px;
+  }
+}
+
+@media only screen and (max-width: 1370px)
+{
+  
+  .budget {
+    width: 20vw;
+  }
+  
+  .range {
+    display: flex;
+    width: 300px;
+  }
+
+  div.checkbox_select
+{
+  width: 200px;
+  height: 50px;
+}
+}
+
+@media only screen and (max-width: 1290px)
+{
+
+  header
+  {
+      padding: 20px 10px;
+  }
+
+  
+  .allboxes
+  {
+    display: grid;
+    justify-content: center;
+    /*align-items: center;*/ 
+  }
+
+  .checkbox_select_dropdown
+  {
+    position: relative;
+    z-index: 9999;
+  }
+
+  div.checkbox_select
+  {
+    width: 300px;
+    height: 50px;
+  }
+}
+
+
+
+@media (max-width: 768px)
+{
+    .hamburger
+    {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line
+    {
+        width: 50px;
+        height: 3px;
+        margin: 10px 0;
+        background: #0a0909;
+    }
+    .navbar
+    {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: 0;
+        width: 100vw;
+        background: #000000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .navbar.active
+    {
+        height: 450px;
+    }
+    .navbar ul 
+    {
+        display: block;
+        width: moz-fit-content;
+        margin: 70px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .navbar.active ul
+    {
+        opacity: 1;
+    }
+    .navbar ul li  
+    {
+        margin-bottom: 30px;
+        color: #301aac;
+    }
+    .banner
+    {
+        height: 42vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+
+    header
+  {
+      padding: 1px 20px;
+  }
+
+    .head
+    {
+        height: 130vh;
+        background-image: url(deerpark.jpg);
+        background-size: cover;
+        transition: 0s;
+    }
+    .welcome
+    {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .allboxes
+    {
+      display: grid;
+      justify-content: center;
+      /*align-items: center;*/ 
+    }
+
+    .checkbox_select_dropdown
+    {
+      position: relative;
+      z-index: 9999;
+    }
+    
+    .budget {
+      width: 18vw;
+    }
+    
+    .range {
+      display: flex;
+      width: 300px;
+    }
+}
